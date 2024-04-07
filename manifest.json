@@ -3,12 +3,17 @@
     "name": "Reading time",
     "version": "1.0",
     "description": "Add the reading time to Chrome Extension documentation",
+    "permissions": ["tabs"],
     "content_scripts": [
 	{
 	    "js": ["scripts/content.js"],
 	    "matches": [
 		"https://www.instagram.com/*"
-	    ]
+	    ],
+	    "css": ["text.css"]
 	}
-    ]
+    ],
+    "background": {
+	"service_worker": "scripts/background.js"
+    }
 }
