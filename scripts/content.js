@@ -1,5 +1,7 @@
 function printTextContent() {
-    const elements = document.querySelectorAll('div[aria-label="For you"]');
+    // This gets the "for you" text
+    //const elements = document.querySelectorAll('div[aria-label="For you"]');
+    const elements = document.querySelectorAll('div[tabindex="-1"]')
     if (elements) {
 	elements.forEach(element => {
 	    element.textContent = 'STOP, YOU SHOULD BE WORKING!';
